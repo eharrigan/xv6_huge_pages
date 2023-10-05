@@ -46,3 +46,11 @@ Bochs makes debugging easier, but QEMU is much faster.
 To run in Bochs, run "make bochs" and then type "c" at the bochs prompt.
 To run in QEMU, run "make qemu".
 
+THIS PROJECT
+
+I've modified xv6 so that kernel pages can be allocated in varying size,
+by using a buddy allocator.
+4M sized huge pages can also be allocated, and are mapped using the PDEs
+that are already available in xv6.
+More details on specific code changes in kernel/README
+
