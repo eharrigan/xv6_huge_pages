@@ -1,0 +1,38 @@
+CHANGES:
+
+This is a modified version of stock xv6 that supports allocation of 4M huge pages
+
+The bulk of the changes are made to kalloc.c and vm.c
+
+kalloc.c changes:
+
+In stock xv6, pages in the data section are allocated into fixed 4k size blocks.
+Free pages are stored in a linked list, and kalloc simply pops the first page off of the free list, and kfree pushes the freed page onto the free list.
+
+I've changed xv6 to use what is sometimes referred to as a buddy allocator.
+Pages are initially allocated as 4M size. When a page is allocated, take the smallest page that can handle the request, and split it in half until it is the correct size to handle the request.
+When a page is split, the remaining half of that page will be referred to as its "buddy".
+
+When a page is freed, check if its buddy is free. If the buddy is free, then coalesce the pages and mark them together as one free page of the combined size. It's possible that freeing one page could cause a cascading effect where multiple buddies are coalesced because of one page that is being freed.
+
+For all of the pages in each size category, we must keep a list of free pages. In addition, keep bitmaps that indicate whether non free blocks are allocated or split
+
+Because the first page needs to have a 4M alignment, there is plenty of space for the metadata before the first 4M alignment.
+
+In this scenario, the only page sizes that will be requested are 4K and 4M because of the nature of the PTEs in xv6
+
+vm.c changes:
+
+mappages:
+Instead of automatically mapping a 4K page, check the size and set the page size bit in the PDE to indicate a huge page
+
+vmenable:
+set the PSE flag in control register 4 to enable huge pages.
+
+
+loaduvm:
+When copying the page directory check if a PDE refers to a page directory entry, or is mapped to a huge page.
+If the PDE is mapped to a huge page then copy the correct number of bytes
+
+allocuvm:
+When allocating memory, if the size is greater than 4M, try to allocate a huge page.

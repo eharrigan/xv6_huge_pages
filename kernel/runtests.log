@@ -1,0 +1,170 @@
+starting build
+
+**********************************************************************
+
+Test build
+build xv6 using make
+
+**********************************************************************
+Trying to build project using make
+make
+make: *** No targets specified and no makefile found.  Stop.
+
+
+test build FAILED
+ (build xv6 using make)
+ make failed (error 2)
+ required file 'xv6.img' does not exist after make
+ required file 'fs.img' does not exist after make
+
+starting test1a
+
+**********************************************************************
+
+Test test1a
+Tests getnextpid() after one fork call
+
+**********************************************************************
+Running xv6 user progam /home/cs537-1/tests/P2/ctests/test1a.c
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+
+test test1a FAILED (0 of 1)
+ (Tests getnextpid() after one fork call)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+starting test1b
+
+**********************************************************************
+
+Test test1b
+Tests getnextpid() after a child process exits
+
+**********************************************************************
+Running xv6 user progam /home/cs537-1/tests/P2/ctests/test1b.c
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+
+test test1b FAILED (0 of 1)
+ (Tests getnextpid() after a child process exits)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+starting test1c
+
+**********************************************************************
+
+Test test1c
+Tests getnextpid() after forking N number of child processes
+
+**********************************************************************
+Running xv6 user progam /home/cs537-1/tests/P2/ctests/test1c.c
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+
+test test1c FAILED (0 of 1)
+ (Tests getnextpid() after forking N number of child processes)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+starting test2a
+
+**********************************************************************
+
+Test test2a
+Tests getprocstate() for run process
+
+**********************************************************************
+Running xv6 user progam /home/cs537-1/tests/P2/ctests/test2a.c
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+
+test test2a FAILED (0 of 1)
+ (Tests getprocstate() for run process)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+starting test2b
+
+**********************************************************************
+
+Test test2b
+Tests getprocstate() for runble process
+
+**********************************************************************
+Running xv6 user progam /home/cs537-1/tests/P2/ctests/test2b.c
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+
+test test2b FAILED (0 of 1)
+ (Tests getprocstate() for runble process)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+starting test2c
+
+**********************************************************************
+
+Test test2c
+Tests getprocstate() for zombie process
+
+**********************************************************************
+Running xv6 user progam /home/cs537-1/tests/P2/ctests/test2c.c
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+
+test test2c FAILED (0 of 1)
+ (Tests getprocstate() for zombie process)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+starting test2d
+
+**********************************************************************
+
+Test test2d
+Tests getprocstate() with negative byte size
+
+**********************************************************************
+Running xv6 user progam /home/cs537-1/tests/P2/ctests/test2d.c
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+
+test test2d FAILED (0 of 1)
+ (Tests getprocstate() with negative byte size)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+**********************************************************************
+Summary:
+test build FAILED
+ (build xv6 using make)
+ make failed (error 2)
+ required file 'xv6.img' does not exist after make
+ required file 'fs.img' does not exist after make
+
+test test1a FAILED (0 of 1)
+ (Tests getnextpid() after one fork call)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+test test1b FAILED (0 of 1)
+ (Tests getnextpid() after a child process exits)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+test test1c FAILED (0 of 1)
+ (Tests getnextpid() after forking N number of child processes)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+test test2a FAILED (0 of 1)
+ (Tests getprocstate() for run process)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+test test2b FAILED (0 of 1)
+ (Tests getprocstate() for runble process)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+test test2c FAILED (0 of 1)
+ (Tests getprocstate() for zombie process)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+test test2d FAILED (0 of 1)
+ (Tests getprocstate() with negative byte size)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmp85qic2li/p/user/tester.c'
+
+Passed 0 of 8 tests.
+Overall 0 of 8
+Points 0 of 7
